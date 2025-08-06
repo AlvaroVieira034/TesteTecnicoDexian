@@ -71,43 +71,43 @@ inherited FrmCadPedido: TFrmCadPedido
     ExplicitWidth = 725
     ExplicitHeight = 208
     inherited GrbDados: TGroupBox
-      Left = 6
+      Left = 5
       Top = 4
       Width = 710
       Height = 195
       Anchors = [akLeft, akTop, akRight]
-      Caption = ' Dados da venda '
-      ExplicitLeft = 6
+      Caption = ' Dados da pedido '
+      ExplicitLeft = 5
       ExplicitTop = 4
       ExplicitWidth = 710
       ExplicitHeight = 195
       object Label1: TLabel
         Left = 41
-        Top = 36
-        Width = 85
+        Top = 35
+        Width = 87
         Height = 13
-        Caption = '&C'#243'digo da Venda:'
+        Caption = '&C'#243'digo do Pedido:'
       end
       object Label2: TLabel
         Left = 51
-        Top = 67
-        Width = 75
+        Top = 66
+        Width = 77
         Height = 13
-        Caption = '&Data da Venda:'
+        Caption = '&Data do Pedido:'
       end
       object Label4: TLabel
         Left = 23
-        Top = 131
-        Width = 103
+        Top = 130
+        Width = 105
         Height = 13
-        Caption = '&Valor Total da Venda:'
+        Caption = '&Valor Total do Pedido:'
       end
       object Label3: TLabel
-        Left = 38
+        Left = 40
         Top = 98
         Width = 88
         Height = 13
-        Caption = 'C'#243'&digo do Cliente:'
+        Caption = 'C'#243'digo do C&liente:'
       end
       object BtnPesquisar: TSpeedButton
         Left = 210
@@ -239,7 +239,7 @@ inherited FrmCadPedido: TFrmCadPedido
       end
       object EdtDataPedido: TEdit
         Left = 134
-        Top = 64
+        Top = 63
         Width = 74
         Height = 21
         Alignment = taRightJustify
@@ -250,32 +250,32 @@ inherited FrmCadPedido: TFrmCadPedido
       end
       object EdtTotalPedido: TEdit
         Left = 134
-        Top = 123
+        Top = 127
         Width = 76
         Height = 21
         Alignment = taRightJustify
         Enabled = False
-        TabOrder = 2
+        TabOrder = 4
       end
       object EdtCodCliente: TEdit
         Left = 134
-        Top = 96
+        Top = 95
         Width = 76
         Height = 21
         Alignment = taRightJustify
-        TabOrder = 3
+        TabOrder = 2
         OnChange = EdtCodClienteChange
         OnExit = EdtCodClienteExit
         OnKeyPress = EdtCodClienteKeyPress
       end
       object LcbxNomeCliente: TDBLookupComboBox
         Left = 211
-        Top = 96
+        Top = 95
         Width = 284
         Height = 21
         KeyField = 'COD_CLIENTE'
         ListField = 'DES_NOME'
-        TabOrder = 4
+        TabOrder = 3
         OnClick = LcbxNomeClienteClick
       end
       object BtnInserirItens: TButton
@@ -311,13 +311,13 @@ inherited FrmCadPedido: TFrmCadPedido
       ExplicitTop = 174
     end
     inherited GrbGrid: TGroupBox
-      Left = 6
+      Left = 5
       Top = 6
       Width = 710
       Height = 283
       Anchors = [akLeft, akTop, akRight]
-      Caption = ' Vendas encontradas '
-      ExplicitLeft = 6
+      Caption = ' Itens do Pedido '
+      ExplicitLeft = 5
       ExplicitTop = 6
       ExplicitWidth = 710
       ExplicitHeight = 283
@@ -411,8 +411,8 @@ inherited FrmCadPedido: TFrmCadPedido
         OnClick = BtnDelItemGridClick
       end
       object DbGridItensPedido: TDBGrid
-        Left = 10
-        Top = 65
+        Left = 15
+        Top = 64
         Width = 692
         Height = 209
         Anchors = [akLeft, akRight, akBottom]

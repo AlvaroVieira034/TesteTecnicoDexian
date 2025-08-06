@@ -31,7 +31,9 @@ uses
   cep.service in 'util\cep.service.pas',
   conexao in 'util\conexao.pas',
   connection in 'util\connection.pas',
-  untFormat in 'util\untFormat.pas';
+  untFormat in 'util\untFormat.pas',
+  urelpedidos in 'view\urelpedidos.pas' {FrmRelPedidos},
+  umostrapedido in 'view\umostrapedido.pas' {FrmMostraPedido};
 
 {$R *.res}
 

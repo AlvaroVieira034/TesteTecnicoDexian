@@ -23,8 +23,6 @@ object FrmMain: TFrmMain
     Color = clGradientActiveCaption
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -165
-    ExplicitWidth = 896
     object BtnSair: TSpeedButton
       Left = 345
       Top = 10
@@ -647,6 +645,7 @@ object FrmMain: TFrmMain
         6A6B6A6A6E6C6C414141FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFF0000}
       Layout = blGlyphTop
+      OnClick = BtnRelatoriosClick
     end
   end
   object Timer1: TTimer
