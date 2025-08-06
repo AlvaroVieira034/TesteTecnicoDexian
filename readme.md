@@ -1,6 +1,6 @@
-# Sistema de delivery para farmácias
+# Cadastro de Pedidos e Itens de Pedido
 
-## Desafio técnico - Pharmapele
+## Desafio técnico Delphi - Dexian
 
 ## Menu
 
@@ -20,29 +20,22 @@
 ## Introdução
 
 Este projeto é uma aplicação Delphi, desenvolvida como forma de desafio técnico para o processo seletivo para uma vaga de programador Delphi. 
-A aplicação permite a criação de cadastros de Clientes, Produtos e Entregadores, registra o movimento de pedidos, possibilitando a inclusão, alteração 
-e exclusão de pedidos e seus respectivos itens, criação e gestão das entregas, além da pesquisas diversar e interativas, através de uma interface de pequisa, permitindo a navegação entre registros, 
-exibindo ou atualizando os dados armazenados no banco de dados.
+A aplicação permite a criação de cadastros de Clientes e Produtos, registra o movimento de pedidos, possibilitando a inclusão, alteração 
+e exclusão de pedidos e seus respectivos itens,  além da pesquisas diversas e interativas, através de uma interface de pequisa, permitindo a navegação entre registros, exibindo ou atualizando os dados armazenados no banco de dados.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Configurações
 
-Para que seja possível a execução da aplicação, é necessário que seja criado um banco de dados Firebid (BDPHARMA.FDB), cujo script para criação 
-do banco de dados (*Script Criação de Tabelas*), criação das tabelas utilizadas na aplicação e população de registros nas tabelas, encontra-se
-disponível dentro do projeto na pasta *Docs*. 
+Para que seja possível a execução da aplicação, é necessário que seja criado um banco de dados SQL Server (bdTesteDeian), cujo script para criação do banco de dados (*Script Criação de Tabelas*), criação das tabelas utilizadas na aplicação e população de registros nas tabelas, encontra-se disponível dentro do projeto na pasta *Docs*. 
 
-Na pasta do projeto, encontra-se o arquivo *pharma.ini* contendo as informações necessárias para que a aplicação conecte com o banco de dados 
+Na pasta do projeto, encontra-se o arquivo *testedexian.ini* contendo as informações necessárias para que a aplicação conecte com o banco de dados 
 criado anteriormente. Também encontra-se na pasta do projeto o arquivo *Instrução para configuração do banco de dados a ser utilizado.pdf*, 
-contendo todas as instruções para execução do script de criação das tabelas e configuração do arquivo *pharma.ini".
+contendo todas as instruções para execução do script de criação das tabelas e configuração do arquivo *testedexian.ini".
 
-*Arquivo PHAMRA.INI*
-![alt text](image-1.png)
-Com qualquer editor de arquivos TXT (ex: bloco de notas), é possível fazer as alterações no arquivo *pharma.ini" para que seja possível realizar a conexão ao banco de dados e consequentemente, executar a apliacação sem erros.
-
-[Abrir PDF](<docs/Instrução para configuração do banco de dados a ser utilizado.pdf>)
-
-
+*Arquivo testedexian.INI*
+![alt text](image-2.png)
+Com qualquer editor de arquivos TXT (ex: bloco de notas), é possível fazer as alterações no arquivo *testedexian.ini" para que seja possível realizar a conexão ao banco de dados e consequentemente, executar a apliacação sem erros.
 
 # Arquitetura
 
@@ -154,13 +147,13 @@ Open/Closed Principle (OCP): O sistema foi projetado para ser aberto para extens
 
 ## Dicas de Uso
 
-![alt text](image-2.png)
+![alt text](image-3.png)
 
-A interface principal da aplicação é apresentada contendo os botões de opções (Clientes, Produtos, Entregadores, Pedidos, Criar Entregas, Ver Entregas e Sair), Através dessa interface que serão abertas as telas de uso da aplicação. 
+A interface principal da aplicação é apresentada contendo os botões de opções (Clientes, Produtos, Pedidos, Relatórios e Sair), Através dessa interface que serão abertas as telas de uso da aplicação. 
 
 ## Cadastro de Clientes
 
-![alt text](image-3.png)
+![alt text](image-4.png)
 
 Na interface principal, ao clicar no botão **"Clientes"**, será exibida a interface de clientes, contendo os dados do cliente, uma grade contendo todos os clientes cadastrados, uma área para pesquisa no grid (podendo ser alterada a forma de pesquisa por nome do cliente ou cidade), além dos botões de ação (Incluir, Alterar, Excluir, Gravar, Cancelar e Sair), localizados acima da tela.
 
@@ -174,23 +167,22 @@ Para selecionar um registro da grade, basta dar um duplo click no registro escol
 
 - **Botão Sair:** Fecha a tela do cadastro de produtos e retorna ao menu inicial.
 
-### Cadastro de Produtos e Entregadoes
+### Cadastro de Produtos
 
 Segue o mesmo padrão de uso do cadastro de clientes, podendo realizar as mesmas operações 
 
 ## Cadastro de Pedidos
 
-![alt text](image-4.png)
+![alt text](image-5.png)
 
 Na interface principal, ao clicar no botão **"Pedidos"**, será exibida a interface de pedidos contendo os dados do pedido e uma grade para os produtos cadastrados, além dos botões de ação (Incluir, Alterar, Excluir, Gravar, Cancelar e Sair), localizados acima da tela.
 
-Para acessar um pedido cadastrado o usuário pode informar o codigo da venda no campo apropriado e em seguida clicar no botão "**Pesquisar**". ![alt text](image-6.png)
+Para acessar um pedido cadastrado o usuário pode informar o codigo da venda no campo apropriado e em seguida clicar no botão "**Pesquisar**".![alt text](image-6.png)
 
 
 Caso o usuário deseje fazer uma pesquisa de todas as vendas cadastradas, basta clicar no botão pesquisar e será exibida uma tela contendo todas os pedidos cadastrados para que o usuário escolha o pedido desejado.
 
 ![alt text](image-7.png)
-
 
 Para selecionar um registro, o usuário pode clicar no botão "**Selecionar**" ![alt text](image-8.png), pode dar um duplo click no registro desejado ou navegar pelo grid usando as setas e acionar a tecla *Enter* para selecionar um registro, nesse caso, o resgistro será exibido, já estando em modo de edição. A pesquisa pode ser refinada, escolhendo o filtro para a pesquisa e informando um valor para pesquisa, valor esse que pode ser parte da informação ou a informação completa.
 
@@ -200,36 +192,24 @@ Para a inclusão de pedidos, seguir os passos abaixo:
 
 Clicar no botão **Inserir** para liberar a digitação dos dados do pedido.
 
-Após preencher os dados do pedido, **Inserir Itens**  ![alt text](image-9.png) para liberar a inclusão dos itens do pedido.
+Após preencher os dados do pedido, **Inserir Itens** ![alt text](image-9.png) para liberar a inclusão dos itens do pedido.
 
 Escolha o produto, informe a quantidade, o preço unitário (caso exista valor informado no cadastro para o produto escolhido, o campo "*Preço Unitário**" será preenchido automaticamente, podendo o mesmo ser alterado de acordo com o desejo do usuário) e o preço total do item.
 
 Clique no botão **Adicionar Produto** ![alt text](image-10.png) no pedido e o mesmo ir para a grade de produtos cadastrados.
 
-Caso deseje excluir um produto cadastrado, clique no **Deletar Item** ![alt text](image-11.png) para exluir o produto da grade de produtos cadastrados.
+Caso deseje excluir um produto cadastrado, clique no **Deletar Item**  ![alt text](image-11.png) para exluir o produto da grade de produtos cadastrados.
 
 Após incluir os itens desejados, clicar no botão **Gravar** para realizar a inclusão do pedido.
 
-## Criar Entregas
-
+## Relatórios
 ![alt text](image-12.png)
 
-Para criar novas entregas, clique no botão **Inserir** para habilitar os campos para criação de uma nova entrega. Selecione o entregador responsável pela entrega e selecione o pedido no grid, cliando 2 vezes no pedido ou clicando no botão **Inserir Pedido**. ![alt text](image-13.png)
+Nessa tela será mostrado todos os pedidos cadastrados no sistema. Poderá ser feito também pequisa por intervalo de datas, bastanto para isso, informar o periódo desejado.
+
+Para todas as informações de um pedido específico, basta dar um duplo click ou enter no registro selecionado, e serão mostrados todos os dados do pedido.
+
+![alt text](image-13.png)
 
 
-![alt text](image-14.png)
-
-Pedido selecionado e adicionado no grid, o usuário pode continuar lançando novas entregas para o entregador selecionado no pedido anterior ou selecionar novo entregador, repetindo o processo de inclusão no grid inferior os pedidos encaminhados para entregas. Caso deseje excluir um pedido selecionado para entrega, cujo mesmo foi inserido por engano, basta selecionar o grid inferior o pedido desejado e clicar no botão ![alt text](image-15.png) para excluir o pedido inserido por engano.
-
-Terminando o processo, clicar no botão **Gravar** para persistir no banco de dados todas as entregas criadas.
-
-## Acompanhar Pedidos
-![alt text](image-16.png)
-
-Nessa tela será mostrado todo os pedidos cadastrados no sistema, bem como a sua posição de entrega (Pendente, Em Andamento e Entegue). 
-
-Caso o usuário desejar concluir uma entrega, selecionar o pedido no grid e clicar no botão **Concluir Entrega**. Ne momento, será solicitado ao usuário que informe a data de entrega do pedido. Somente pedidos com status **Em Andamento** serão permitidos serem concluídos. Pedidos com status **Pendente** precisam ter suas entregas criadas, para posteriormente serem concluídos.
-![alt text](image-17.png)
-
-Clique no botão OK ![alt text](image-18.png) para concluir a entrega do pedido, e o mesmo mudar seu status para **Entregue**.
 
